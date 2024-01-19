@@ -25,3 +25,38 @@ function generateUrl(string $url = null): string
     
     return $environment . '/' . $url;
 }
+
+
+function currentFormattedDate($format = 'H:i:s') {
+    return date($format);
+}
+
+
+ function currentDate(): string
+{
+    $dayOfMonth = date('d');
+    $dayOfWeek = date('w');
+    $month = date('n') - 1;
+    $year = date('Y');
+
+    $weekDayNames = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+
+    $monthNames = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro'
+    ];
+
+    $formattedDate = $weekDayNames[$dayOfWeek] . ', ' . $dayOfMonth . ' de ' . $monthNames[$month] . ' de ' . $year;
+
+    return $formattedDate;
+};
