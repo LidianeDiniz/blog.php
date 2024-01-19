@@ -1,7 +1,9 @@
 <?php
-require_once 'Helpers.php';
+require_once 'Utilities.php';
+require_once 'system/config.php';
 
-echo saudacao() .PHP_EOL;
 
+//var_dump(generateUrl());
 
-echo 'teste123';
+echo generateUrl('admin');
+
